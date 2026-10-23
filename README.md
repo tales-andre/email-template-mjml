@@ -1,6 +1,6 @@
 # Outlook-safe HTML newsletter template (MJML)
 
-A multi-section newsletter template that renders consistently in Outlook desktop (Word rendering engine), Outlook web, Gmail, Apple Mail and mobile clients. Written in [MJML](https://mjml.io) and compiled to plain table-based HTML with inline CSS.
+A multi-section newsletter template built for Outlook desktop (Word rendering engine), Outlook web, Gmail, Apple Mail and mobile clients. Browser previews are in this repo; run your own client matrix (Litmus, Email on Acid or test sends) before shipping. Written in [MJML](https://mjml.io) and compiled to plain table-based HTML with inline CSS.
 
 - Source: [`src/newsletter.mjml`](src/newsletter.mjml)
 - Compiled output: [`dist/newsletter.html`](dist/newsletter.html) (~25 KB, no external CSS or JavaScript)
