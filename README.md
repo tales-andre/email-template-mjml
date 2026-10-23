@@ -4,7 +4,7 @@ A multi-section newsletter template that renders consistently in Outlook desktop
 
 - Source: [`src/newsletter.mjml`](src/newsletter.mjml)
 - Compiled output: [`dist/newsletter.html`](dist/newsletter.html) (~25 KB, no external CSS or JavaScript)
-- Previews: [desktop](preview/newsletter-700.png) · [mobile](preview/newsletter-375.png)
+- Previews: [desktop](preview/newsletter-desktop.png) · [mobile](preview/newsletter-mobile.png)
 
 ## What it covers
 
