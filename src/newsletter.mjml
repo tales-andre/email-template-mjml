@@ -1,0 +1,111 @@
+<mjml lang="en">
+  <mj-head>
+    <mj-title>Monthly update — Northwind Community Trust</mj-title>
+    <mj-preview>Three things we did this month, and one you can help with.</mj-preview>
+    <!-- Outlook desktop ignores @font-face and media queries; MJML already emits table layout,
+         inline CSS and MSO conditionals. We keep web-safe fallbacks and fixed 600px width. -->
+    <mj-attributes>
+      <mj-all font-family="Arial, Helvetica, sans-serif" />
+      <mj-text font-size="16px" line-height="24px" color="#1f2933" padding="0 24px 16px" />
+      <mj-section padding="0" background-color="#ffffff" />
+      <mj-column padding="0" />
+      <mj-button font-size="16px" font-weight="bold" inner-padding="14px 28px" border-radius="4px" />
+    </mj-attributes>
+    <mj-style inline="inline">
+      .h1 { font-size: 28px; line-height: 36px; font-weight: bold; color: #0b3d5b; }
+      .h2 { font-size: 20px; line-height: 28px; font-weight: bold; color: #0b3d5b; }
+      .muted { font-size: 13px; line-height: 20px; color: #6b7280; }
+    </mj-style>
+    <mj-style>
+      /* Dark-mode hints for clients that honour them (Apple Mail, some Gmail). Outlook desktop ignores. */
+      :root { color-scheme: light dark; supported-color-schemes: light dark; }
+      @media (prefers-color-scheme: dark) {
+        .dm-bg { background-color: #0f172a !important; }
+        .dm-card { background-color: #1e293b !important; }
+        .dm-text { color: #e2e8f0 !important; }
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body width="600px" background-color="#eef2f6" css-class="dm-bg">
+
+    <!-- Preheader spacer / brand bar -->
+    <mj-section background-color="#0b3d5b" padding="16px 24px">
+      <mj-column width="50%" vertical-align="middle">
+        <!-- Logo: fixed width+height attributes so Outlook never upsizes; alt text for blocked images -->
+        <mj-image src="https://placehold.co/160x40/0b3d5b/ffffff/png?text=Northwind" alt="Northwind Community Trust" width="160px" height="40px" align="left" padding="0" />
+      </mj-column>
+      <mj-column width="50%" vertical-align="middle">
+        <mj-text align="right" color="#cbd5e1" font-size="13px" padding="0">October 2026 · Issue 14</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Hero banner: a plain <img> at 600px wide, 2x asset served for retina, under 200 KB.
+         Outlook needs explicit width/height; no background-image here on purpose. -->
+    <mj-section>
+      <mj-column>
+        <mj-image src="https://placehold.co/1200x500/dbeafe/0b3d5b/png?text=Volunteers+planting+trees" alt="Volunteers planting trees in Riverside Park" width="600px" height="250px" padding="0" fluid-on-mobile="true" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Headline + intro -->
+    <mj-section padding="32px 0 8px" css-class="dm-card">
+      <mj-column>
+        <mj-text css-class="h1 dm-text">Three things we did this month</mj-text>
+        <mj-text css-class="dm-text">
+          Thank you for standing with us. Here is a short account of where your support went in October, and one way you can help in November.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Two-column section: MJML emits MSO conditional table columns so Outlook keeps them side by side -->
+    <mj-section padding="8px 0 16px" css-class="dm-card">
+      <mj-column width="50%">
+        <mj-image src="https://placehold.co/560x320/e0f2fe/0b3d5b/png?text=Food+bank" alt="Volunteers sorting donations at the food bank" width="276px" height="158px" padding="0 24px 12px" />
+        <mj-text css-class="h2 dm-text" padding="0 24px 8px">Food bank relaunched</mj-text>
+        <mj-text css-class="dm-text">A new team of twelve volunteers now runs Saturday collections. Fresh produce is sorted the same day.</mj-text>
+      </mj-column>
+      <mj-column width="50%">
+        <mj-image src="https://placehold.co/560x320/fef3c7/92400e/png?text=Youth+coding" alt="Teenagers at the youth coding workshop" width="276px" height="158px" padding="0 24px 12px" />
+        <mj-text css-class="h2 dm-text" padding="0 24px 8px">Youth coding nights</mj-text>
+        <mj-text css-class="dm-text">Every Thursday at the library. Laptops are provided; places for the next term open on 4 November.</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Divider -->
+    <mj-section padding="0 24px" css-class="dm-card">
+      <mj-column>
+        <mj-divider border-color="#e5e7eb" border-width="1px" padding="8px 0 24px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Story 3 + call to action. Bulletproof button: MJML renders it as a table cell with
+         background-color and padding, which Outlook honours (no <a> padding tricks). -->
+    <mj-section padding="0 0 32px" css-class="dm-card">
+      <mj-column>
+        <mj-text css-class="h2 dm-text">One thing you can help with</mj-text>
+        <mj-text css-class="dm-text">
+          Riverside Park needs 40 volunteers on Saturday 15 November for the winter planting. Two hours, tools and hot drinks provided, all ages welcome.
+        </mj-text>
+        <mj-button href="https://example.org/volunteer?utm_source=newsletter&utm_campaign=issue-14" background-color="#0b3d5b" color="#ffffff" align="left" padding="8px 24px 0">
+          Save my place
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer: physical address and unsubscribe placeholder are required by most ESPs and by law -->
+    <mj-section background-color="#eef2f6" padding="24px 0" css-class="dm-bg">
+      <mj-column>
+        <mj-text css-class="muted" align="center" padding="0 24px 8px">
+          Northwind Community Trust · 12 Harbour Street, Newcastle NE1 3AA · Registered charity no. 0000000
+        </mj-text>
+        <mj-text css-class="muted" align="center" padding="0 24px 0">
+          You receive this because you signed up at an event or online.
+          <a href="{{unsubscribe_url}}" style="color:#6b7280; text-decoration:underline;">Unsubscribe</a> ·
+          <a href="{{view_in_browser_url}}" style="color:#6b7280; text-decoration:underline;">View in browser</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
